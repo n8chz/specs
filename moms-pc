@@ -1,0 +1,298 @@
+eileen-compaq-pc
+    description: Mini Tower Computer
+    version: �������������������������������
+    width: 32 bits
+    capabilities: smbios-2.3 dmi-2.3
+    configuration: boot=normal chassis=mini-tower uuid=32383132-3132-3137-3539-323438354534
+  *-core
+       description: Motherboard
+       product: 070Ch
+       vendor: Compaq
+       physical id: 0
+       version: None
+       serial: None
+     *-firmware
+          description: BIOS
+          vendor: Compaq
+          physical id: 0
+          version: 786K2
+          date: 02/16/2001
+          size: 64KiB
+          capacity: 192KiB
+          capabilities: pci pnp upgrade shadowing escd cdboot bootselect edd int13floppynec int13floppytoshiba int13floppy360 int13floppy1200 int13floppy720 int5printscreen int9keyboard int14serial int17printer acpi usb agp ls120boot biosbootspecification
+     *-cpu
+          description: CPU
+          product: AMD Athlon(tm) Processor
+          vendor: Hynix Semiconductor (Hyundai Electronics)
+          physical id: 4
+          bus info: cpu@0
+          version: 6.4.2
+          slot: U12A
+          size: 1200MHz
+          capacity: 2GHz
+          width: 32 bits
+          clock: 133MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 mtrr pge mca cmov pat pse36 mmx fxsr syscall mmxext 3dnowext 3dnow up
+        *-cache:0
+             description: L1 cache
+             physical id: 5
+             size: 128KiB
+             capacity: 128KiB
+             capabilities: synchronous internal write-back unified
+        *-cache:1
+             description: L2 cache
+             physical id: 6
+             size: 256KiB
+             capacity: 256KiB
+             capabilities: synchronous internal write-back data
+     *-memory
+          description: System Memory
+          physical id: 7
+          slot: System board or motherboard
+          size: 1GiB
+          capacity: 1536MiB
+        *-bank:0
+             description: DIMM DRAM Synchronous 133 MHz (7.5 ns)
+             physical id: 0
+             slot: DIMM1
+             size: 1GiB
+             width: 64 bits
+             clock: 133MHz (7.5ns)
+        *-bank:1
+             description: DIMM DRAM Synchronous [empty]
+             physical id: 1
+             slot: DIMM2
+     *-pci
+          description: Host bridge
+          product: AMD-760 [IGD4-1P] System Controller
+          vendor: Hynix Semiconductor (Hyundai Electronics)
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 12
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=agpgart-amdk7 latency=32
+          resources: irq:0 memory:50000000-5fffffff memory:41300000-41300fff ioport:14b8(size=4)
+        *-pci
+             description: PCI bridge
+             product: AMD-760 [IGD4-1P] AGP Bridge
+             vendor: Hynix Semiconductor (Hyundai Electronics)
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pci normal_decode bus_master
+        *-firewire
+             description: FireWire (IEEE 1394)
+             product: TSB12LV26 IEEE-1394 Controller (Link)
+             vendor: Texas Instruments
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm ohci bus_master cap_list
+             configuration: driver=firewire_ohci latency=32 maxlatency=4 mingnt=3
+             resources: irq:3 memory:41100000-411007ff memory:41000000-41003fff
+        *-multimedia
+             description: Multimedia audio controller
+             product: SB Live! EMU10k1
+             vendor: Creative Labs
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=EMU10K1_Audigy latency=32 maxlatency=20 mingnt=2
+             resources: irq:10 ioport:1440(size=32)
+        *-input
+             description: Input device controller
+             product: SB Live! Game Port
+             vendor: Creative Labs
+             physical id: 7.1
+             bus info: pci@0000:00:07.1
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=Emu10k1_gameport latency=32
+             resources: irq:0 ioport:14b0(size=8)
+        *-display UNCLAIMED
+             description: VGA compatible controller
+             product: 86c775/86c785 [Trio 64V2/DX or /GX]
+             vendor: S3 Inc.
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 16
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller
+             configuration: latency=0
+             resources: memory:44000000-47ffffff memory:40020000-4002ffff
+        *-network
+             description: Ethernet interface
+             product: SMC2-1211TX
+             vendor: Accton Technology Corporation
+             physical id: 9
+             bus info: pci@0000:00:09.0
+             logical name: eth0
+             version: 10
+             serial: 00:10:b5:d8:46:cb
+             size: 10Mbit/s
+             capacity: 100Mbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list rom ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=8139too driverversion=0.9.28 duplex=half latency=32 link=no maxlatency=64 mingnt=32 multicast=yes port=MII speed=10Mbit/s
+             resources: irq:11 ioport:1000(size=256) memory:41200000-412000ff memory:40000000-4001ffff
+        *-communication
+             description: Modem
+             product: HSP MicroModem 56
+             vendor: PCTel Inc
+             physical id: a
+             bus info: pci@0000:00:0a.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm hayes_16750 cap_list
+             configuration: driver=serial latency=0
+             resources: irq:3 ioport:1400(size=64)
+        *-isa
+             description: ISA bridge
+             product: VT82C686 [Apollo Super South]
+             vendor: VIA Technologies, Inc.
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 40
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa pm bus_master cap_list
+             configuration: driver=parport_pc latency=0
+             resources: irq:0
+        *-ide
+             description: IDE interface
+             product: VT82C586A/B/VT82C686/A/B/VT823x/A/C PIPC Bus Master IDE
+             vendor: VIA Technologies, Inc.
+             physical id: 14.1
+             bus info: pci@0000:00:14.1
+             logical name: scsi0
+             logical name: scsi1
+             version: 06
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide pm bus_master cap_list emulated
+             configuration: driver=pata_via latency=32
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:14a0(size=16)
+           *-disk
+                description: ATA Disk
+                product: QUANTUM FIREBALL
+                vendor: Quantum
+                physical id: 0
+                bus info: scsi@0:0.0.0
+                logical name: /dev/sda
+                version: A0A.
+                serial: 376832218445
+                size: 6149MiB (6448MB)
+                capabilities: partitioned partitioned:dos
+                configuration: ansiversion=5 signature=0005d35b
+              *-volume:0
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 1
+                   bus info: scsi@0:0.0.0,1
+                   logical name: /dev/sda1
+                   logical name: /
+                   version: 1.0
+                   serial: ca25ff6a-fd4e-47f5-a5fa-184c9cf92016
+                   size: 2154MiB
+                   capacity: 2154MiB
+                   capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                   configuration: created=2013-01-02 18:00:31 filesystem=ext4 lastmountpoint=/ modified=2016-12-14 20:20:22 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro,user_xattr,acl,barrier=1,data=ordered mounted=2017-02-09 17:38:54 state=mounted
+              *-volume:1
+                   description: Extended partition
+                   physical id: 2
+                   bus info: scsi@0:0.0.0,2
+                   logical name: /dev/sda2
+                   size: 3993MiB
+                   capacity: 3993MiB
+                   capabilities: primary extended partitioned partitioned:extended
+                 *-logicalvolume:0
+                      description: Linux swap / Solaris partition
+                      physical id: 5
+                      logical name: /dev/sda5
+                      capacity: 202MiB
+                      capabilities: nofs
+                 *-logicalvolume:1
+                      description: Linux filesystem partition
+                      physical id: 6
+                      logical name: /dev/sda6
+                      logical name: /home
+                      capacity: 3790MiB
+                      configuration: mount.fstype=xfs mount.options=rw,relatime,attr2,delaylog,noquota state=mounted
+           *-cdrom:0
+                description: DVD reader
+                product: DVD-ROM DVD-116
+                vendor: Compaq
+                physical id: 1
+                bus info: scsi@1:0.0.0
+                logical name: /dev/cdrom
+                logical name: /dev/dvd
+                logical name: /dev/scd0
+                logical name: /dev/sr0
+                version: 1.06
+                capabilities: removable audio dvd
+                configuration: ansiversion=5 status=nodisc
+           *-cdrom:1
+                description: CD-R/CD-RW writer
+                physical id: 0.1.0
+                bus info: scsi@1:0.1.0
+                logical name: /dev/cdrom1
+                logical name: /dev/cdrw1
+                logical name: /dev/scd1
+                logical name: /dev/sr1
+                capabilities: audio cd-r cd-rw
+                configuration: status=nodisc
+        *-usb:0
+             description: USB controller
+             product: VT82xxxxx UHCI USB 1.1 Controller
+             vendor: VIA Technologies, Inc.
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 16
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=32
+             resources: irq:11 ioport:1460(size=32)
+        *-usb:1
+             description: USB controller
+             product: VT82xxxxx UHCI USB 1.1 Controller
+             vendor: VIA Technologies, Inc.
+             physical id: 14.3
+             bus info: pci@0000:00:14.3
+             version: 16
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=32
+             resources: irq:11 ioport:1480(size=32)
+        *-bridge UNCLAIMED
+             description: Bridge
+             product: VT82C686 [Apollo Super ACPI]
+             vendor: VIA Technologies, Inc.
+             physical id: 14.4
+             bus info: pci@0000:00:14.4
+             version: 40
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge pm cap_list
+             configuration: latency=0
+  *-network
+       description: Ethernet interface
+       physical id: 1
+       logical name: usb0
+       serial: 02:62:ee:0d:4f:d5
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=cdc_ncm driverversion=04-Aug-2011 firmware=CDC NCM ip=192.168.42.12 link=yes multicast=yes
